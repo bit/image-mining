@@ -99,7 +99,7 @@ class FigureExtractor(object):
         return cv2.findContours(image, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
     def _find_contours_opencv3(self, image):
-        _, a, b = cv2.findContours(image, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+        a, b = cv2.findContours(image, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
         return a, b
 
     if cv2.__version__.startswith('2.'):
@@ -171,7 +171,7 @@ class FigureExtractor(object):
                 other_boxes = [j for j in boxes if j is not i]
                 for j in other_boxes:
                     if j.overlaps(i):
-                        print "\tMerging overlapping extracts: %s %s" % (i, j)
+                        print("\tMerging overlapping extracts: %s %s" % (i, j))
                         i.merge(j)
                         boxes.remove(j)
                         restart = True
