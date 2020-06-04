@@ -15,20 +15,19 @@ Current
 Prerequisites
 -------------
 
-* Python 2.6+
+* Python 3+
 * OpenCV 2.4+
 * numpy
 
 Using Mac Homebrew this should install cleanly::
 
-    brew install python numpy opencv
+    brew install python3 numpy opencv
 
-On Ubuntu 12.04 Precise the following is known to work - note the need for a PPA to get OpenCV 2.4+::
+On Ubuntu/Debian run::
 
-    sudo add-apt-repository ppa:alexei.colin/opencv
-    sudo apt-get update
-    sudo apt-get install python-numpy python-opencv
-    
+    sudo apt install python3-numpy python3-opencv
+
+
 Discussion
 ----------
 
